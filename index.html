@@ -78,6 +78,25 @@ None so far
 
 /* window.onload necessary to keep javascripts from running before the app gets a chance to load entirely. */
  window.onload = function() {
+        <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext("2d");
+        context.font = '20pt Calibri';
+        context.fillStyle = "black";
+        context.fillText("Original image will go here", 10, 20) 
+      </script>
+           <!-- Blue canvas, uses same layout as canvas1 -->
+      <canvas id="dataCanvas" width="600" height="500" style="border:1px solid #d3d3d3; margin-top: 10px;"></canvas>
+     
+      <script>
+      var canvas2 = document.getElementById('dataCanvas');
+      var context2 = canvas2.getContext("2d");
+      context2.font = '20pt Calibri';
+      context2.fillStyle = "black";
+      context2.fillText("Blue intensity image will go here", 10, 20);
+   </script>
+
+
   var fileInput = document.getElementById('fileInput');
   var messageDisplayArea = document.getElementById('messageDisplayArea');
   /* fileInput.addEventListener looks for any change in the <input> tag indicating that the user has selected a file (picture). */
@@ -158,24 +177,7 @@ None so far
       <div id="messageDisplayArea"></div>
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20) 
-      </script>
-           <!-- Blue canvas, uses same layout as canvas1 -->
       <canvas id="dataCanvas" width="600" height="500" style="border:1px solid #d3d3d3; margin-top: 10px;"></canvas>
-     
-      <script>
-      var canvas2 = document.getElementById('dataCanvas');
-      var context2 = canvas2.getContext("2d");
-      context2.font = '20pt Calibri';
-      context2.fillStyle = "black";
-      context2.fillText("Blue intensity image will go here", 10, 20);
-   </script>
-
    <!-- /content -->
     <div data-role="footer" data-position="fixed">
       <p>DIY Diagnostics</p>
