@@ -127,6 +127,7 @@ None so far
                }
                // Putting blue-only image onto canvas2
                context2.putImageData(blueImage, 0, 0);
+               console.log("Blue-only image rendered.");
            } 
         // end of img.onload
         img.src = reader.result;
@@ -166,6 +167,7 @@ None so far
       </script>
            <!-- Blue canvas, uses same layout as canvas1 -->
       <canvas id="dataCanvas" width="600" height="500" style="border:1px solid #d3d3d3; margin-top: 10px;"></canvas>
+     
       <script>
       var canvas2 = document.getElementById('dataCanvas');
       var context2 = canvas2.getContext("2d");
