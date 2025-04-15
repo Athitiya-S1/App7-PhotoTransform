@@ -125,6 +125,8 @@ None so far
                  blueData[i + 2] = blue;  // Blue channel = original blue value
                  blueData[i + 3] = 255;   // Alpha channel = fully opaque
                }
+               // Putting blue-only image onto canvas2
+               context2.putImageData(blueImage, 0, 0);
            } 
         // end of img.onload
         img.src = reader.result;
