@@ -24,11 +24,12 @@
   http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios
   
   Brief Description of Goal of Code:
-  blah, blah, blah,
+Programming an app that enables user to upload image of choice, which will then be duplicated and transformed blue
+
  
   Known Issues:
-  blah, blah, blah, blah
--->
+None so far
+ -->
 
  <head>
   <meta charset="utf-8">
@@ -102,9 +103,13 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
-          
-          
-          
+               // Pixel information from the canvas 1
+               var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+              var data = imageData.data; // Pixel data is in a 1D array
+         
+               // canvas2 and its context
+               var canvas2 = document.getElementById('dataCanvas');
+               var context2 = canvas2.getContext("2d");                    
         } // end of img.onload
         
         img.src = reader.result;
