@@ -30,8 +30,7 @@ Programming an app that enables user to upload image of choice, which will then 
   Known Issues:
 None so far
  -->
-<!DOCTYPE html>
- <html>
+
  <head>
     <meta charset="utf-8"> <!-- Set the character encoding to UTF-8 for proper handling of special characters -->
   <title>Photo Transform</title>   <!-- Set the title of the webpage that appears in the browser tab -->
@@ -79,23 +78,19 @@ None so far
 
 /* window.onload necessary to keep javascripts from running before the app gets a chance to load entirely. */
  window.onload = function() {
-        <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20) 
-      </script>
            <!-- Blue canvas, uses same layout as canvas1 -->
       <canvas id="dataCanvas" width="600" height="500" style="border:1px solid #d3d3d3; margin-top: 10px;"></canvas>
      
-      <script>
       var canvas2 = document.getElementById('dataCanvas');
       var context2 = canvas2.getContext("2d");
       context2.font = '20pt Calibri';
       context2.fillStyle = "black";
       context2.fillText("Blue intensity image will go here", 10, 20);
-   </script>
 
 
   var fileInput = document.getElementById('fileInput');
@@ -157,7 +152,6 @@ None so far
     } // end of the else statement if file in NOT an image
   }); // end of the fileInput.addEventListener function
  } // end of the window.onload function
- </script>
  </head>
 
  <body>
