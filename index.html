@@ -34,13 +34,13 @@ None so far
  <head>
     <meta charset="utf-8"> <!-- Set the character encoding to UTF-8 for proper handling of special characters -->
   <title>Photo Transform</title>   <!-- Set the title of the webpage that appears in the browser tab -->
-  <meta name="viewport" content="width=device-width, initial-scale=.7">   <!-- Make the site responsive on mobile by setting the viewport scale -->
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">   <!-- Make the site responsive on mobile by setting the viewport scale -->
   <meta name="apple-mobile-web-app-capable" content="yes">   <!-- Enable full-screen mode when added to home screen on Apple devices -->
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />   <!-- Link to jQuery Mobile's CSS for mobile-friendly styling -->
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>   <!-- Include jQuery library (version 1.9.1) -->
   <script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>   <!-- Include jQuery Mobile JavaScript library (version 1.3.2) -->
 
- <script>
+ <script> 
   var docMod = document.lastModified; // gets last modified date and time of the index.html file
   console.log("This file last modified  " + docMod); // displays last modified date and time in the javascipt browser console 
 
@@ -150,14 +150,19 @@ None so far
       // this is what happens if the orignial file selected is not an image file
       messageDisplayArea.innerHTML = "File not supported!"
     } // end of the else statement if file in NOT an image
-  }); // end of the fileInput.addEventListener function
- } // end of the window.onload function
+  }; // end of the fileInput.addEventListener function
+  // end of the window.onload function
+
+ </script>
  </head>
 
  <body>
   <div data-role="page">
     <div data-role="header">
-    <h1>Primary Colors</h1></div><!-- /header -->
+    <h1>Primary Colors</h1>
+    </div>
+   
+   <!-- /header -->
     <div data-role="content">	
       <h2>Push button to take picture.</h2>
       <div>
@@ -167,8 +172,8 @@ None so far
       <div id="messageDisplayArea"></div>
       
       <canvas id="myCanvas" style="border:1px solid #d3d3d3;"></canvas>
- <canvas id="dataCanvas" style="border:1px solid #d3d3d3; margin-top:10px;"></canvas>   <!-- /content -->
-     
+ <canvas id="dataCanvas" style="border:1px solid #d3d3d3; margin-top:10px;"></canvas>   
+         
     <div data-role="footer" data-position="fixed">
       <p>DIY Diagnostics</p>
     </div><!-- /footer -->
